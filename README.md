@@ -1,3 +1,7 @@
+# This is an app to manage rpg's adventures for your party!
+
+![Projeto wireframe do paint RPG](https://github.com/juliocnp/rpg/assets/23281019/c9e7c779-839a-4706-977e-602614175b93)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
