@@ -4,8 +4,8 @@ import ThemeToggler from '../themeToggler/themeToggler';
 import { useThemeContext } from '../../contexts/themeContext';
 
 const TesteComponent = () => {
-  const { usePrimary } = useThemeContext();
-  const themeClass = usePrimary ? 'theme-default' : 'theme-alternate';
+  const { theme } = useThemeContext();
+  const themeClass = theme == 'light' ? 'theme-default' : 'theme-alternate';
 
   return (
     <div className={`test-component ${themeClass}`}>

@@ -1,7 +1,7 @@
 import React, { createContext, useContext, useState } from 'react';
 
 const themeContext = createContext({
-  usePrimary: true,
+  theme: 'light',
   toggleColor: () => { return; },
 });
 
@@ -10,14 +10,14 @@ export function useThemeContext() {
 }
 
 export function ThemeContextProvider({ children } : ContextProps) {
-  const [usePrimary, setUsePrimary] = useState(true);
+  const [theme, setTheme] = useState('light');
 
   const toggleColor = () => {
-    setUsePrimary((prevValue) => !prevValue);
+    setTheme((prevValue) => prevValue === 'dark' ? 'light' : 'dark');
   };
 
   return (
-    <themeContext.Provider value={{ usePrimary, toggleColor }}>
+    <themeContext.Provider value={{ theme, toggleColor }}>
       {children}
     </themeContext.Provider>
   );
